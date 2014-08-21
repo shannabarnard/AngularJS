@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="DemoApp">
+  <head>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="ratings.css">
+  </head>
+
+  <body ng-controller="DemoCtrl" class="container">
+
+    <a href="https://github.com/shannabarnard">
+      <img style="position: fixed; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+    </a>
+
+    <h1>AngularJS rating with CSS3 labels</h1>
+    <p>Star rating with on-hover labels that can be edited in the CSS. Clear button resets user input to default value.</p>
+    <angular-ratings notify-url="notify.json" notify-id="id" ng-model="user_rating"></angular-ratings>
+    <span id="clear" ng-click="user_rating = 0" ng-show="user_rating" class="badge">Clear</span>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+    <script src="ratings.js"></script>
+    <script src="demo.js"></script>
+  </body>
+</html>
